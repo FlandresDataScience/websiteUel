@@ -1,0 +1,11 @@
+{% extends "spanishVersion/layout.html" %}
+
+{% block body %}
+    <h1>Program.html</h1>
+    <h1>{{ requestedProgram.title }}</h1>
+    <h2>{{ requestedProgram.description }}</h2>
+    <h3>{{ requestedProgram.presentation }}</h3>
+    <h2>{{ reqProSecretary.secretary }}</h2>
+    <h2>{{ reqProSecretary.email }}</h2>
+    <h2>{{ reqProSecretary.phone }}</h2>
+{% endblock %}
