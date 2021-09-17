@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Page title{% endblock %}</title>
+        <link href="{% static 'spanishVersion/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Layout pre body</h1>
+        {% block body %}
+        {% endblock %}
+        <h1>Layout post body</h1>
+    </body>
+</html>
