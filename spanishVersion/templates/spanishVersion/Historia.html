@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Estatal de Londrina - UEL</title>
+     <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'spanishVersion/Historia.css' %}">
+    <!-- Scripts -->
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/fed1afe66e.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="{% static 'spanishVersion/progressbar.min.js' %}"></script>
+    <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="{% static 'spanishVersion/uel_logo.svg' %}" alt="UEL"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <ul>
+              <li><a href="#">Sobre</a>
+                <ul>
+                  <li><a href="{% url 'historia' %}">Historia</a></li>
+                  <li><a href="{% url 'corpos' %}">Corpos de Apoio</a></li>
+                  <li><a href="{% url 'orgaos' %}">Orgãos de apoio à saude</a></li>
+                  <li><a href="{% url 'canais' %}">Canais de comunicação</a></li>
+                  <!-- <li><a href="#">UEL nos rankings universitarios</a></li> -->
+                </ul>
+              </li>
+              <li><a href="#">Vida no campus</a>
+                <ul>
+                  <li><a href="{% url 'arte' %}">Arte e cultura</a></li>
+                  <li><a href="{% url 'esportes' %}">Esporte e condiconamento fisico</a></li>
+                  <li><a href="{% url 'vida' %}">Vida de Estudante</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Estude na UEL</a>
+                <ul>
+                  <li><a href="{% url 'graduacao' %}">Graducação</a></li>
+                  <li><a href="{% url 'post' %}">Pós graduação</a></li>
+                  <li><a href="{% url 'mestrado' %}">Mestrado</a></li>
+                  <li><a href="{% url 'doutorado' %}">Doutorado</a></li>
+                </ul></li>
+              <li><a href="#">Pesquisa</a>
+                <ul>
+                  <li><a href="{% url 'pesquisa' %}">Programas</a></li>
+                  <li><a href="{% url 'laboratorios' %}">Laboratorios</a></li>
+                </ul></li>
+              <li><a href="{% url 'extensao' %}">Extensão</a></li>
+              <li><a href="{% url 'assessoria' %}">Acessoria de relações internacionais</a></li>
+              <li><a href="{% url 'guia_estudante' %}">Guia do estudante internacional</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+        <!--container do parallax-->
+        <div id="data-image">
+          <div class="container-fluid">
+            <!-- ESTE BLOCO COLOCA A IMAGEM, MAS ESTA FORA DE ESCALA <img src="{% static 'spanishVersion/uel-construcao.jpg' %}" class="d-block w-100" alt="arte y Cultura">-->
+          </div>
+        </div>
+        
+        <!-- descricao da historia-->
+        <div id="descricao">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="main-title"> Um pouco de historia...</h3>
+                <p>A Universidade Estadual de Londrina ( UEL ) foi fundada em 1970 e oficialmente reconhecida como universidade financiada pelo estado em 1971, como resultado da fusão das faculdades existentes de Letras, Direito, Filosofia e Odontologia. Sua localização foi definida para um campus de 235 hectares, fora do centro da cidade.</p>
+                <figure>
+                  <img src="{% static 'spanishVersion/uel-projeto-74.jpg' %}" alt="Foto do projeto de 1974">
+                  <figcaption>Repercussões do projeto de 1971, em 1974.</figcaption>
+                </figure>
+                <p>A UEL completou 50 anos de atividades em outubro de 2021, destacando-se nacionalmente em ensino, pesquisa e extensão e se solidificando no cenário internacional pelo impacto das pesquisas desenvolvidas.</p>
+                <figure>
+                  <img src="{% static 'spanishVersion/uel-google-earth.jpg' %}" alt="Foto paranoramica de 2021">
+                  <figcaption>Repercussões do projeto de 1971, em 1974.</figcaption>
+                </figure>
+                <p>A estrutura acadêmica se evidencia pelos 53 cursos presenciais de Graduação (bacharelados e licenciaturas) e 261 de Pós-Graduação (residências, especializações, mestrados e doutorados), distribuídos em nove Centros de Estudo, além de uma comunidade formada por 25 mil estudantes, professores e servidores técnico-administrativos.</p>
+                <p>A missão da UEL é produzir e disseminar conhecimento, formando cidadãos e profissionais das diversas áreas acadêmicas nos valores éticos de liberdade, igualdade e justiça social. A Universidade cresceu consideravelmente, sendo atualmente considerada uma das 5 melhores universidades estaduais do país .</p>
+                <p>Após quase 50 anos de ensino, pesquisa e divulgação, a UEL se esforça para cumprir seu papel de criar oportunidades e fornecer recursos humanos de alto nível para muitos campos diferentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+  <!--Footer / Roda pé-->
+  <footer>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="main-title"></h3>
+
+            Universidade Estadual de Londrina
+            <br>
+            Estrutura Administrativa
+            <br>        
+            Rodovia Celso Garcia Cid | PR 445 Km 380 | Campus Universitário
+            <br>
+            Cx. Postal  10.011 | CEP 86.057-970 | Londrina - PR
+            <br>
+            <a href="http://www.uel.br/portal/index.php?pagina=canais-atendimento.php"><font color=green>Fale com a UEL</font></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <div id="copy-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+          <p>Desenvolvido por <a href="#" target="_blank"><font color=green>Univesp - P.I, Grupo 1 Turma 2020</font></a> &copy; 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <script src="{% static 'spanishVersion/Historia.js' %}"></script>
+</body>
+</html>

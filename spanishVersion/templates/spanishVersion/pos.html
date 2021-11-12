@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Estatal de Londrina - UEL</title>
+     <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'spanishVersion/Orgaos_apoio_saude.css' %}">
+    <!-- Scripts -->
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/fed1afe66e.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="{% static 'spanishVersion/progressbar.min.js' %}"></script>
+    <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="{% static 'spanishVersion/uel_logo.svg' %}" alt="UEL"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <ul>
+              <li><a href="#">Sobre</a>
+                <ul>
+                  <li><a href="{% url 'historia' %}">Historia</a></li>
+                  <li><a href="{% url 'corpos' %}">Corpos de Apoio</a></li>
+                  <li><a href="{% url 'orgaos' %}">Orgãos de apoio à saude</a></li>
+                  <li><a href="{% url 'canais' %}">Canais de comunicação</a></li>
+                  <!-- <li><a href="#">UEL nos rankings universitarios</a></li> -->
+                </ul>
+              </li>
+              <li><a href="#">Vida no campus</a>
+                <ul>
+                  <li><a href="{% url 'arte' %}">Arte e cultura</a></li>
+                  <li><a href="{% url 'esportes' %}">Esporte e condiconamento fisico</a></li>
+                  <li><a href="{% url 'vida' %}">Vida de Estudante</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Estude na UEL</a>
+                <ul>
+                  <li><a href="{% url 'graduacao' %}">Graducação</a></li>
+                  <li><a href="{% url 'post' %}">Pós graduação</a></li>
+                  <li><a href="{% url 'mestrado' %}">Mestrado</a></li>
+                  <li><a href="{% url 'doutorado' %}">Doutorado</a></li>
+                </ul></li>
+              <li><a href="#">Pesquisa</a>
+                <ul>
+                  <li><a href="{% url 'pesquisa' %}">Programas</a></li>
+                  <li><a href="{% url 'laboratorios' %}">Laboratorios</a></li>
+                </ul></li>
+              <li><a href="{% url 'extensao' %}">Extensão</a></li>
+              <li><a href="{% url 'assessoria' %}">Acessoria de relações internacionais</a></li>
+              <li><a href="{% url 'guia_estudante' %}">Guia do estudante internacional</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+        <!--container do parallax-->
+        <div id="data-image">
+          <div class="container-fluid">
+          </div>
+        </div>
+        
+        <!-- descricao dos corpos de apoio-->
+        <div id="descricao">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="main-title"> Catálogo de cursos de pós-graduação</h3>
+                  
+                  </br>
+                  <p><b>Cursos do CLCH - Cento de Letras e Ciências Humanas:</b></p>
+                  </br>
+                    <ul><a href="#"><b> Antropologia: Diferença, Desigualdade e Poder </b> </a> (Presencial) </ul>
+                    <ul><a href="#"><b> Ensino de Inglês para Crianças </b></a> EAD </ul>
+                    <ul><a href="#"><b> Ensino de Línguas Estrangeiras </b></a> (Presencial) </ul>
+                    <ul><a href="#"><b> Ensino de Sociologia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b> Filosofia Moderna e Contemporânea: aspectos éticos e políticos</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b> Língua Portuguesa </b></a> (Presencial) </ul>
+                    <ul><a href="#"><b> Patrimônio e História</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b> Religiões e Religiosidades</b> (Presencial) </a></ul>
+                    </br>
+                    </br>
+                    <p><b>Cursos do CCB - Cento de Ciências Biológicas:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Biologia Aplicada à Saúde</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Biologia Tecidual e do Desenvolvimento</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Clínica Psicanalítica</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Ensino de Biologia</b></a> (EAD) </ul>
+                    <ul><a href="#"><b>  Ensino de Ciências Biológicas</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Fisiologia Translacional: da Saúde à Doença</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Genética Aplicada</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Neurociências</b></a> (Presencial) </ul>
+                    </br>
+                    </br>
+                    <p><b>Cursos do CCE - Cento de Ciências Exatas:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Análise, Projeto e Gerência de Sistemas com ênfase em Inteligência em Negócios</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Biotecnologia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Engenharia de Software</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Ensino de Geografia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Estatística com ênfase em Pesquisa Quantitativa</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Machine Learning e Big Data</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Redes de Computadores com enfoque em IoT</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Química para a Educação Básica</b></a> (EAD) </ul>
+                    <ul><a href="#"><b>  Tecnologias de Informática na Educação</b></a> (EAD) </ul>
+                    </br>
+                    </br>
+                    <p><b>CESA - Centro de Estudos Sociais Aplicados: </b></p>
+                    </br>
+                    <ul><a href="#"><b>  Contabilidade e Controladoria Empresarial</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito Ambiental</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito Civil e Processo Civil</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito de Família e Sucessões - teoria e prática</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito do Estado</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito e Processo Penal</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito Empresarial aplicado à era digital</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito Internacional e Econômico</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direito Previdenciário</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Economia Ambiental: Valoração, Licenciamento, Auditoria, Educação e Perícia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Economia Empresarial</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Filosofia Política e Jurídica</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Finanças Corporativas</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Gestão Contábil e Financeira para Pequenas e Médias Empresas</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Gestão Industrial e Negócios</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Gestão Pública</b></a> (EAD) </ul>
+                    <ul><a href="#"><b>  Gestão Tributária e Contabilidade</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Perícia Contábil e Auditoria</b></a> (Presencial) </ul>
+                    </br>
+                    </br>
+                    <p><b>Cursos do CCS - Cento de Ciências da Saúde:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Análises Clínicas</b></a> (Presencial</ul>
+                    <ul><a href="#"><b>  Controle de Infecção Relacionada à Assistência à Saúde</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Ortodontia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Saúde Mental</b></a> (Presencial) </ul>                    
+                    </br>
+                    </br>
+                    <p><b> Cursos do CECA  - Centro de Educação, Comunicação e Artes:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Comunicação com o Mercado</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Comunicação e Cultura Política</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Comunicação Popular e Comunitária</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Design Digital</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Design Thinking para a Educação</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Direção de Arte: Design e Comunicação</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Docência na Educação Superior</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Educação de Jovens e Adultos</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Ergonomia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Gestão de Arquivos e Tecnologias Aplicada</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Moda: Produto e Comunicação</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Modelagem do Vestuário</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Política e Gestão da Educação</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Psicopedagogia</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Trabalho Pedagógico em Educação Infantil</b></a> (Presencial) </ul>
+                    </br>
+                    </br>
+                    <p><b>Cursos do CTU: Centro de Tecnologia e Urbanismo:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Engenharia de Estruturas</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Engenharia de Segurança do Trabalho</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Projeto Arquitetônico: Composição e Tecnologia do Ambiente Construído</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Robótica Educacional</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Sistemas Eletrônicos Embarcados</b></a> (Presencial) </ul>
+                    </br>
+                    </br>
+                    <p><b>Cursos do CEFE: Centro de Educação Física e Esporte:</b></p>
+                    </br>
+                    <ul><a href="#"><b>  Educação Física Inclusiva</b></a> (EAD) </ul>
+                    <ul><a href="#"><b>  Educação Física na Educação Básica</b></a> (EAD) </ul>
+                    <ul><a href="#"><b>  Educação Física na Educação Básica</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Planejamento e Gestão de Empreendimentos Esportivos</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Treinamento Desportivo</b></a> (Presencial) </ul>
+                    <ul><a href="#"><b>  Treinamento Esportivo</b></a> (Presencial) </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+  </main>
+  <!--Footer / Roda pé-->
+  <footer>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="main-title"></h3>
+
+            Universidade Estadual de Londrina
+            <br>
+            Estrutura Administrativa
+            <br>        
+            Rodovia Celso Garcia Cid | PR 445 Km 380 | Campus Universitário
+            <br>
+            Cx. Postal  10.011 | CEP 86.057-970 | Londrina - PR
+            <br>
+            <a href="http://www.uel.br/portal/index.php?pagina=canais-atendimento.php"><font color=green>Fale com a UEL</font></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <div id="copy-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+          <p>Desenvolvido por <a href="#" target="_blank"><font color=green>Univesp - P.I, Grupo 1 Turma 2020</font></a> &copy; 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <script src="{% static 'spanishVersion/graduacao.js' %}"></script>
+</body>
+</html>
