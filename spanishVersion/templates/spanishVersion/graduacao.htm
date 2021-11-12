@@ -92,62 +92,14 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="main-title"> Catálogo de cursos de graduação</h3>
-                  
                 </br>
                   <p><b>Cursos de graduação ofertados: </b></p>
                   </br>
-                    <ul><a href="#"><b>  Administração </b> </a> - Bacharel</ul>
-                    <ul><a href="#"><b>  Agronomia </b></a> - Engenharia</ul>
-                    <ul><a href="#"><b>  Arquitetura e urbanismo </b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Arquivologia </b></a> - Habilitação: Geral (Bacharel) </ul>
-                    <ul><a href="#"><b>  Artes cênicas </b></a> - Habilitação: Interpretação Teatral (Bacharel) </ul>
-                    <ul><a href="#"><b>  Artes visuais </b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Biblioteconomia </b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Biomedicina</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Biotecnologia</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Ciência da Computação</b></a> - Bacharel</ul>
-                    <ul><a href="#"><b>  Ciências Biologicas</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Ciencias Biologicas</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Ciências Contábeis</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Ciências Econômicas</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Ciências Sociais</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Ciências Sociais</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Design de Moda</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Design Gráfico</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Direito</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Educação Física</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Educação Física</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Enfermagem</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Engenharia Civil</b></a> - Engenharia </ul>
-                    <ul><a href="#"><b>  Engenharia Elétrica</b></a> - Engenharia </ul>
-                    <ul><a href="#"><b>  Farmácia</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Filosófia</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Física</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Física</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Fisioterapia</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Geografia</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Geografia</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  História</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Jornalismo</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Letras Espanhol - Modalidade: Licenciatura</b></a> - Habilitação: Língua Espanhola e Literatura Hispânica</ul>
-                    <ul><a href="#"><b>  Letras Francês Modalidade: Bacharelado</b></a> - Habilitação: Língua e Cultura Francesas </ul>
-                    <ul><a href="#"><b>  Letras Português - Modalidade: Licenciatura</b></a> - Habilitação: Língua Portuguesa e Respectivas Literaturas </ul>
-                    <ul><a href="#"><b>  Matemática</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Matemática</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Medicina</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Medicina veterinária</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Música - Habilitação: Licenciatura</b></a> - Com ênfase em: Canto; Percussão; Piano; Violão; Regência Coral; Arranjo e Composição Musical </ul>
-                    <ul><a href="#"><b>  Nutrição</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Odontologia</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Pedagogia</b></a> - Licenciatura </ul>
-                    <ul><a href="#"><b>  Psicologia</b></a> - Formação de Psicólogo nas ênfases: I) Investigação Científica e Intervenção em Processos Clínicos e Saúde; II) Investigação Científica e Intervenção em Processos Sociais e Institucionais </ul>
-                    <ul><a href="#"><b>  Química - Bacharel</b></a> - Com ênfase em: Química de Materiais ou Química de Alimentos ou Química e Ambiente; e opção pela Habilitação em Química Tecnológica </ul>
-                    <ul><a href="#"><b>  Química</b></a> - Licenciatura</ul>
-                    <ul><a href="#"><b>  Relações Públicas</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Secretariado Executivo</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Serviço Social</b></a> - Bacharel </ul>
-                    <ul><a href="#"><b>  Zootecnica</b></a> - Bacharel </ul>
-                    
+                  {% for grad in gradList %}
+                    <p>
+                        <ul><b><a href="{% url 'gradpage' grad.title %}">{{ grad.title }}</a></b> - {{ grad.grade }}</ul>
+                    </p>
+                  {% endfor %}                    
                 </div>
               </div>
             </div>
