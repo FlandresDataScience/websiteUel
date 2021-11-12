@@ -47,6 +47,61 @@ header, .navbar {
   padding: 1rem .8rem;
 }
 
+/* DROPDOWN */
+ul {
+  list-style: none;
+  padding-left: 0 ;
+}
+
+li {
+  background-color: white;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+li ul li {
+  clear: both;
+  width: 100%;
+}
+
+ul li:hover,
+ul li:focus-within{
+  background-color: #4CAF50;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
 /* Slider */
 
 .container-fluid {
@@ -138,3 +193,143 @@ header, .navbar {
   color: green;
   margin-right: 15px;
 }
+
+/* area de pesquisa(laboratorios CMLP) */
+
+.service-box {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.service-box  i, .service-box a, .service-box a i, .service-box > h4 {
+  transition: .5s;
+}
+
+.service-box a {
+  color: #444;
+}
+
+.service-box i {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.service-box h4 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+
+.service-box:hover > i, .service-box:hover > a, .service-box:hover a i, .service-box:hover > h4 {
+  color: green;
+  text-decoration: none;
+}
+
+/* Quantidade de cursos */
+
+.circle-box div {
+  padding: 0 40px;
+}
+
+.progressbar-text {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#data-area p {
+  color:#FFF;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+/* Fatos sobre a uel */
+
+.card-body {
+  text-align: center;
+}
+
+.card-body a{
+  color: #444;
+}
+/* Vida do estudante no campus UEL */
+
+#apply-area{
+  height: 500px;
+}
+
+#apply-area .container-fluid, #apply-area .row {
+  height: 100%;
+}
+
+#apply-area .apply-box {
+  text-align: center;
+  padding: 70px, 50px;
+}
+
+#company-img {
+  background-image: url('../img/Estudantes-uel.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+#pattern-img h4, #pattern-img p {
+  color: #FFF;
+}
+
+#pattern-img h4 {
+  margin-top: 8%;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#pattern-img p {
+  margin-bottom: 20px;
+}
+
+#apply-btn {
+  display: block;
+  height: auto;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border-collapse: green;
+} 
+
+#apply-btn:hover {
+  border-color: green;
+  background-color: green;
+}
+
+/* Roda pé */
+
+#footer {
+    text-align: center;
+    font-size: 14px;
+    color: #575756;
+    
+}
+
+#footer .container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* CopyWrite */
+
+#copy-area {
+  background-color: #F1F1F1;
+}
+
+#copy-area .container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+
+
