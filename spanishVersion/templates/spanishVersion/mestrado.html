@@ -80,11 +80,8 @@
   </header>
 
     <main>
-        <!--container do parallax-->
-        <div id="data-image">
-          <div class="container-fluid">
-          </div>
-        </div>
+                <!-- removi o container do paralax daqui -->
+                <div style="padding:50px"></div>
         
         <!-- descricao dos corpos de apoio-->
         <div id="descricao">
@@ -97,7 +94,7 @@
                   <p><b>Cursos do CLCH - Cento de Letras e Ciências Humanas:</b></p>
                   </br>
                     {% for masters in mastersClch %}
-                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                      <ul><a href="{% url 'maspage' masters.title %}"><b>{{ masters.title }}</b></a></ul>
                     {% endfor %}
                     </br>
                     </br>

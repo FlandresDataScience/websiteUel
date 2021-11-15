@@ -107,6 +107,12 @@ def mestrado(request):
         "mastersCefe": mastersCefe, 
 })
 
+def maspage(request, mas_title):
+    requestedMas = PostStricto.objects.get(title=mas_title, degree="Mestre")
+    return render(request, "spanishVersion/mas_program.html", {
+      "requestedMas": requestedMas,  
+    })
+
 def doutorado(request): 
     doctorsClch = PostStricto.objects.filter(degree="Doutor",center="CLCH")
     doctorsCca  = PostStricto.objects.filter(degree="Doutor",center="CCA")
@@ -129,6 +135,12 @@ def doutorado(request):
         "doctorsCeca": doctorsCeca,
         "doctorsCtu": doctorsCtu,
         "doctorsCefe": doctorsCefe,
+    })
+
+def docpage(request, doc_title):
+    requestedDoc = PostStricto.objects.get(title=doc_title, degree="Doutor")
+    return render(request, "spanishVersion/doc_program.html", {
+      "requestedDoc": requestedDoc,  
     })
 
 def pesquisa(request): return render(request, "spanishVersion/pesquisa.html")

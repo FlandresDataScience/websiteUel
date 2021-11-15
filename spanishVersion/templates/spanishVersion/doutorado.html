@@ -79,11 +79,8 @@
     </div>
   </header>
     <main>
-        <!--container do parallax-->
-        <div id="data-image">
-          <div class="container-fluid">
-          </div>
-        </div>
+                <!-- removi o container do paralax daqui -->
+                <div style="padding:50px"></div>
         
         <!-- descricao dos corpos de apoio-->
         <div id="descricao">
@@ -95,71 +92,65 @@
                   </br>
                   <p><b>Cursos do CLCH - Cento de Letras e Ciências Humanas:</b></p>
                   </br>
-                    <ul><a href="#"><b> Estudos da Linguagem</b> </a></ul>
-                    <ul><a href="#"><b> Filosofia</b></a></ul>
-                    <ul><a href="#"><b> Letras</b></a></ul>
-                    <ul><a href="#"><b> Sociologia</b></a></ul>
+                    {% for doctors in doctorsClch %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCA - Cento de Ciências Agrariás:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Agronomia</b></a></ul>
-                    <ul><a href="#"><b>  Ciência Animal</b></a></ul>
-                    <ul><a href="#"><b>  Ciência de Alimentos</b></a></ul>
+                    {% for doctors in doctorsCca %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCB - Cento de Ciências Biológicas:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Análise do Comportamento</b></a></ul>
-                    <ul><a href="#"><b>  Ciências Biológicas</b></a></ul>
-                    <ul><a href="#"><b>  Ciências Fisiológicas</b></a></ul>
-                    <ul><a href="#"><b>  Genética e Biologia Molecular</b></a></ul>
-                    <ul><a href="#"><b>  Microbiologia</b></a></ul>
-                    <ul><a href="#"><b>  Multicêntrico em Ciências Fisiológicas</b></a></ul>
-                    <ul><a href="#"><b>  Patologia Experimental</b></a></ul>
+                    {% for doctors in doctorsCcb %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCE - Cento de Ciências Exatas:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Bioenergia</b></a></ul>
-                    <ul><a href="#"><b>  Ensino de Ciências e Educação Matemática</b></a></ul>
-                    <ul><a href="#"><b>  Ensino de Física</b></a> (MBA) </ul>
-                    <ul><a href="#"><b>  Física</b></a></ul>
-                    <ul><a href="#"><b>  Geografia</b></a> </ul>
-                    <ul><a href="#"><b>  Química</b></a></ul>
+                    {% for doctors in doctorsCce %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>CESA - Centro de Estudos Sociais Aplicados: </b></p>
                     </br>
-                    <ul><a href="#"><b>  Direito Negocial</b></a> </ul>
-                    <ul><a href="#"><b>  Serviço Social e Política Social</b></a></ul>
+                    {% for doctors in doctorsCesa %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCS - Cento de Ciências da Saúde:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Ciências da Reabilitação</b></a></ul>
-                    <ul><a href="#"><b>  Ciências da Saúde</b></a></ul>
-                    <ul><a href="#"><b>  Enfermagem</b></a></ul>
-                    <ul><a href="#"><b>  Fisiopatologia Clínica e Laboratorial</b></a></ul> 
-                    <ul><a href="#"><b>  Saúde Coletiva</b></a></ul>                    
+                    {% for doctors in doctorsCcs %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}                   
                     </br>
                     </br>
                     <p><b> Cursos do CECA  - Centro de Educação, Comunicação e Artes:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Ciência da Informação</b></a></ul>
-                    <ul><a href="#"><b>  Educação</b></a></ul>
+                    {% for doctors in doctorsCeca %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CTU: Centro de Tecnologia e Urbanismo:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Arquitetura e Urbanismo</b></a></ul>
-                    <ul><a href="#"><b>  Engenharia Civil</b></a></ul>
-                    <ul><a href="#"><b>  Engenharia Elétrica</b></a></ul>
+                    {% for doctors in doctorsCtu %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CEFE: Centro de Educação Física e Esporte:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Educação Física</b></a></ul>
+                    {% for doctors in doctorsCefe %}
+                      <ul><a href="{% url 'docpage' doctors.title %}"><b>{{ doctors.title }}</b></a></ul>
+                    {% endfor %}
                 </div>
               </div>
             </div>
