@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import GraduationProgram, Program, Secretary
+from .models import GraduationProgram, PostLato, PostStricto, Program, Secretary
 # Create your views here.
 
 # renderiza o index.html no path ""
@@ -51,9 +51,86 @@ def gradpage(request, grad_title):
     })
 
 
-def post(request): return render(request, "spanishVersion/pos.html")
-def mestrado(request): return render(request, "spanishVersion/mestrado.html")
-def doutorado(request): return render(request, "spanishVersion/doutorado.html")
+def post(request): 
+    clchList = PostLato.objects.filter(center="CLCH")
+    # print(clchList)
+    ccbList  = PostLato.objects.filter(center="CCB")
+    print(ccbList)
+    cceList  = PostLato.objects.filter(center="CCE")
+    cesaList = PostLato.objects.filter(center="CESA")
+    ccsList  = PostLato.objects.filter(center="CCS")
+    cecaList = PostLato.objects.filter(center="CECA")
+    ctuList  = PostLato.objects.filter(center="CTU")
+    cefeList = PostLato.objects.filter(center="CEFE")
+    return render(request, "spanishVersion/pos.html", {
+        "clchList": clchList,
+        "ccbList": ccbList,
+        "cceList": cceList,
+        "cesaList": cesaList,
+        "ccsList": ccsList,
+        "cecaList": cecaList,
+        "ctuList": ctuList,
+        "cefeList": cefeList,
+    })
+
+def pospage(request, pos_title):
+    # print(grad_title)
+    # requestedGrad = Program.objects.get(title=grad_title)
+    requestedPos = PostLato.objects.get(title=pos_title)
+    # print("..............................")
+    # print(requestedGrad)
+    return render(request, "spanishVersion/pos_program.html", {
+      "requestedPos": requestedPos,  
+    })
+
+def mestrado(request): 
+    mastersClch = PostStricto.objects.filter(degree="Mestre", center="CLCH")
+    print(mastersClch)
+    mastersCca  = PostStricto.objects.filter(degree="Mestre",center="CCA")
+    mastersCcb  = PostStricto.objects.filter(degree="Mestre",center="CCB")
+    print(mastersCcb)
+    mastersCce  = PostStricto.objects.filter(degree="Mestre",center="CCE")
+    mastersCesa = PostStricto.objects.filter(degree="Mestre",center="CESA")
+    mastersCcs  = PostStricto.objects.filter(degree="Mestre",center="CCS")
+    mastersCeca = PostStricto.objects.filter(degree="Mestre",center="CECA")
+    mastersCtu  = PostStricto.objects.filter(degree="Mestre",center="CTU")
+    mastersCefe = PostStricto.objects.filter(degree="Mestre",center="CEFE")
+    return render(request, "spanishVersion/mestrado.html",  {
+        "mastersClch": mastersClch, 
+        "mastersCca": mastersCca,
+        "mastersCcb": mastersCcb,   
+        "mastersCce": mastersCce,   
+        "mastersCesa": mastersCesa, 
+        "mastersCcs": mastersCcs,   
+        "mastersCeca": mastersCeca, 
+        "mastersCtu": mastersCtu,   
+        "mastersCefe": mastersCefe, 
+})
+
+def doutorado(request): 
+    doctorsClch = PostStricto.objects.filter(degree="Doutor",center="CLCH")
+    doctorsCca  = PostStricto.objects.filter(degree="Doutor",center="CCA")
+    doctorsCcb  = PostStricto.objects.filter(degree="Doutor",center="CCB")
+    doctorsCce  = PostStricto.objects.filter(degree="Doutor",center="CCE")
+    doctorsCeca = PostStricto.objects.filter(degree="Doutor",center="CECA")
+    doctorsCesa = PostStricto.objects.filter(degree="Doutor",center="CESA")
+    doctorsCcs  = PostStricto.objects.filter(degree="Doutor",center="CCS")
+    doctorsCeca = PostStricto.objects.filter(degree="Doutor",center="CECA")
+    doctorsCtu  = PostStricto.objects.filter(degree="Doutor",center="CTU")
+    doctorsCefe = PostStricto.objects.filter(degree="Doutor",center="CEFE")
+    return render(request, "spanishVersion/doutorado.html", {
+        "doctorsClch": doctorsClch,
+        "doctorsCca": doctorsCca,
+        "doctorsCcb": doctorsCcb,
+        "doctorsCce": doctorsCce,
+        "doctorsCeca": doctorsCeca,
+        "doctorsCesa": doctorsCesa,
+        "doctorsCcs": doctorsCcs,
+        "doctorsCeca": doctorsCeca,
+        "doctorsCtu": doctorsCtu,
+        "doctorsCefe": doctorsCefe,
+    })
+
 def pesquisa(request): return render(request, "spanishVersion/pesquisa.html")
 def laboratorios(request): return render(request, "spanishVersion/laboratorios.html")
 def extensao(request): return render(request, "spanishVersion/extensao.html")

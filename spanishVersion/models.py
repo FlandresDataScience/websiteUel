@@ -29,13 +29,40 @@ class GraduationProgram(models.Model):
     objective = models.TextField()
     atuation = models.TextField()
     system = models.CharField(max_length=64)
-    durationMin = models.IntegerField()
-    durationMax = models.IntegerField()
+    durationMin = models.IntegerField(default=4)
+    durationMax = models.IntegerField(default=8)
     shiftVacancies = models.CharField(max_length=64)
     # campos adicionais coletados de http://www.uel.br/portal/english/index.php/academics/undergraduate/ 
-    language = models.CharField(max_length=64)
+    language = models.CharField(max_length=64, default="Portuguesa")
     contact = models.CharField(max_length=64)
 
     def __str__(self):
         return f"{self.title} model-object"
 
+class PostLato(models.Model):
+    # campos coletados de https://www.sistemasweb.uel.br/index.php?contents=system/inscpos/index.php&pagina=view/ListarCursos.php 
+    title = models.CharField(max_length=64)
+    center = models.CharField(max_length=64)
+    reference = models.CharField(max_length=64)
+    # degree = models.CharField(max_length=64)
+    profile = models.TextField()
+    monthCost = models.IntegerField()
+    duration = models.IntegerField(default=8)
+
+    def __str__(self):
+        return f"{self.title} model-object"
+
+class PostStricto(models.Model):
+    # campos (mestrado) coletados de https://www.sistemasweb.uel.br/index.php?contents=system/inscpos/index.php&pagina=view/ListarCursos.php&nv_curso=2&sq_nivel=1
+    # campos (doutorado) https://www.sistemasweb.uel.br/index.php?contents=system/inscpos/index.php&pagina=view/ListarCursos.php
+    title = models.CharField(max_length=64)
+    center = models.CharField(max_length=64)
+    reference = models.CharField(max_length=64)
+    degree = models.CharField(max_length=64)
+    creation = models.CharField(max_length=64) # resolucao
+    profile = models.TextField()
+    capes = models.IntegerField()
+    concentration = models.CharField(max_length=64)
+
+    def __str__(self):
+        return f"{self.title} model-object"

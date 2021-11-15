@@ -96,87 +96,65 @@
                   </br>
                   <p><b>Cursos do CLCH - Cento de Letras e Ciências Humanas:</b></p>
                   </br>
-                    <ul><a href="#"><b> Estudos da Linguagem</b> </a></ul>
-                    <ul><a href="#"><b> Filosofia</b></a></ul>
-                    <ul><a href="#"><b> História Social</b></a></ul>
-                    <ul><a href="#"><b> Letras</b></a></ul>
-                    <ul><a href="#"><b> Letras </b></a> (MBA) </ul>
-                    <ul><a href="#"><b> Letras Estrangeiras Modernas </b></a> (MBA) </ul>
-                    <ul><a href="#"><b> Sociologia</b></a></ul>
-                    <ul><a href="#"><b> Sociologia</b></a> (MBA) </ul>
+                    {% for masters in mastersClch %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
-                    <p><b>Cursos do CCA - Cento de Ciências Agrariás:</b></p>
+                    <p><b>Cursos do CCA - Cento de Ciências Agrárais:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Agronomia</b></a></ul>
-                    <ul><a href="#"><b>  Ciência Animal</b></a></ul>
-                    <ul><a href="#"><b>  Ciência de Alimentos</b></a></ul>
-                    <ul><a href="#"><b>  Clínicas Veterinárias</b></a> (MBA) </ul>
+                    {% for masters in mastersCca %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCB - Cento de Ciências Biológicas:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Análise do Comportamento</b></a></ul>
-                    <ul><a href="#"><b>  Ciências Biológicas</b></a></ul>
-                    <ul><a href="#"><b>  Ciências Fisiológicas</b></a></ul>
-                    <ul><a href="#"><b>  Genética e Biologia Molecular</b></a></ul>
-                    <ul><a href="#"><b>  Microbiologia</b></a></ul>
-                    <ul><a href="#"><b>  Multicêntrico em Ciências Fisiológicas</b></a></ul>
-                    <ul><a href="#"><b>  Patologia Experimental</b></a></ul>
-                    <ul><a href="#"><b>  Psicologia</b></a></ul>
+                    {% for masters in mastersCcb %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCE - Cento de Ciências Exatas:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Bioenergia</b></a></ul>
-                    <ul><a href="#"><b>  Biotecnologia</b></a></ul>
-                    <ul><a href="#"><b>  Ciência da Computação</b></a></ul>
-                    <ul><a href="#"><b>  Ensino de Ciências e Educação Matemática</b></a></ul>
-                    <ul><a href="#"><b>  Ensino de Física</b></a> (MBA) </ul>
-                    <ul><a href="#"><b>  Física</b></a></ul>
-                    <ul><a href="#"><b>  Geografia</b></a> </ul>
-                    <ul><a href="#"><b>  Matemática Aplicada e Computacional</b></a></ul>
-                    <ul><a href="#"><b>  Matemática em Rede Nacional</b>(MBA) </a></ul>
-                    <ul><a href="#"><b>  Química</b></a></ul>
-                    <ul><a href="#"><b>  Química</b></a> (MBA)</ul>
+                    {% for masters in mastersCce %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>CESA - Centro de Estudos Sociais Aplicados: </b></p>
                     </br>
-                    <ul><a href="#"><b>  Administração</b></a></ul>
-                    <ul><a href="#"><b>  Direito Negocial</b></a> </ul>
-                    <ul><a href="#"><b>  Economia Regional</b></a></ul>
-                    <ul><a href="#"><b>  Gestão de Marketing e Mídias Digitais</b></a> (MBA) </ul>
-                    <ul><a href="#"><b>  Gestão de Pessoas e People Experience</b></a> (MBA) </ul>
-                    <ul><a href="#"><b>  Serviço Social e Política Social</b></a></ul>
+                    {% for masters in mastersCesa %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CCS - Cento de Ciências da Saúde:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Ciências da Reabilitação</b></a></ul>
-                    <ul><a href="#"><b>  Ciências da Saúde</b></a></ul>
-                    <ul><a href="#"><b>  Ciências Farmacêuticas</b></a></ul>
-                    <ul><a href="#"><b>  Fisiopatologia Clínica e Laboratorial</b></a></ul> 
-                    <ul><a href="#"><b>  Saúde Coletiva</b></a></ul>                    
+                    {% for masters in mastersCcs %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}                 
                     </br>
                     </br>
                     <p><b> Cursos do CECA  - Centro de Educação, Comunicação e Artes:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Ciência da Informação</b></a></ul>
-                    <ul><a href="#"><b>  Comunicação</b></a></ul>
-                    <ul><a href="#"><b>  Educação</b></a></ul>
+                    {% for masters in mastersCeca %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CTU: Centro de Tecnologia e Urbanismo:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Arquitetura e Urbanismo</b></a></ul>
-                    <ul><a href="#"><b>  Engenharia Civil</b></a></ul>
-                    <ul><a href="#"><b>  Engenharia Elétrica</b></a></ul>
+                    {% for masters in mastersCtu %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                     </br>
                     </br>
                     <p><b>Cursos do CEFE: Centro de Educação Física e Esporte:</b></p>
                     </br>
-                    <ul><a href="#"><b>  Educação Física</b></a></ul>
+                    {% for masters in mastersCefe %}
+                      <ul><a href="#"><b>{{ masters.title }}</b></a></ul>
+                    {% endfor %}
                 </div>
               </div>
             </div>

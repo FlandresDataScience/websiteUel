@@ -15,6 +15,7 @@ urlpatterns = [
     path('graduacao', views.graduacao, name='graduacao'),
     path('gradpage/<str:grad_title>', views.gradpage, name='gradpage'),
     path('post', views.post, name='post'),
+    path('pospage/<str:pos_title>', views.pospage, name='pospage'),
     path('mestrado', views.mestrado, name='mestrado'),
     path('doutorado', views.doutorado, name='doutorado'),
     path('pesquisa', views.pesquisa, name='pesquisa'),
