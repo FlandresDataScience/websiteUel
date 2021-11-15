@@ -1,0 +1,24 @@
+{% extends "spanishVersion/layout.html" %}
+
+{% block body %}
+    <div id="descricao">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="main-title">{{ requestedGrad.title }}</h3>
+              <p>Criação: {{ requestedGrad.creation }}</p>
+              <p>Grau: {{ requestedGrad.grade }}</p>
+              <p>Perfil do Profissional: {{ requestedGrad.profile }}</p>
+              <p>Objetivo do Curso: {{ requestedGrad.objective }}</p>
+              <p>Campos de Atuação: {{ requestedGrad.atuation }}</p>
+              <p>Sistema Acadêmico: {{ requestedGrad.system }}</p>
+              <p>Duração Mínima e Máxima: {{ requestedGrad.durationMin }} a {{ requestedGrad.durationMax }} anos</p>
+              <p>Turno/vagas: {{ requestedGrad.shiftVacancies }}</p>
+              <p>Linguagem das aulas: {{ requestedGrad.language }}</p>
+              <p>Contato: {{ requestedGrad.contact }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock %}

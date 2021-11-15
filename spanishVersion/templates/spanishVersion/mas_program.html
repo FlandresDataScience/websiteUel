@@ -1,0 +1,20 @@
+{% extends "spanishVersion/layout.html" %}
+
+{% block body %}
+    <div id="descricao">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="main-title">{{ requestedMas.title }}</h3>
+              <p>Referência: {{ requestedMas.reference }}</p>
+              <p>Grau concedido: Mestre</p>
+              <p>Criação: {{ requestedMas.creation }}</p>
+              <p>Perfil do Profissional: {{ requestedMas.profile }}</p>
+              <p>CAPES: {{ requestedMas.capes }}</p>
+              <p>Cencentração: {{ requestedMas.concentration }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock %}

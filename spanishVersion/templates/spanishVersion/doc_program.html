@@ -1,0 +1,20 @@
+{% extends "spanishVersion/layout.html" %}
+
+{% block body %}
+  <div id="descricao">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="main-title">{{ requestedDoc.title }}</h3>
+          <p>Referência: {{ requestedDoc.reference }}</p>
+          <p>Grau concedido: Doutor</p>
+          <p>Criação: {{ requestedDoc.creation }}</p>
+          <p>Perfil do Profissional: {{ requestedDoc.profile }}</p>
+          <p>CAPES: {{ requestedDoc.capes }}</p>
+          <p>Cencentração: {{ requestedDoc.concentration }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+{% endblock %}
